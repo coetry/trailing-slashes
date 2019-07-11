@@ -16,6 +16,7 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "now-build": "npm run build",
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
     "start": "sirv public --single",
