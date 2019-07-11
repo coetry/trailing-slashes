@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "trailing-slashes",
+  "public": true,
   "builds": [
     {"src": "admin/**", "use": "@now/static"},
     {
