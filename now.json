@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "name": "trailing-slashes",
+  "builds": [
+    {"src": "admin/**", "use": "@now/static"},
+    {
+      "src": "www/package.json",
+      "use": "@now/static-build",
+      "config": {"distDir": "public"}
+    }
+  ],
+  "routes": [
+    {"src": "/admin", "dest": "admin/"},
+    {"src": "/admin/(.*)", "dest": "admin/$1"},
+    {"src": "/(.*)", "dest": "www/$1"}
+  ]
+}
